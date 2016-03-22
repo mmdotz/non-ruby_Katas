@@ -15,10 +15,21 @@
 // getting started, need to eval odd or even
 function stringy(size) {
   if (size > 1) {
-    console.log(1 * size);
+    console.log(("1").repeat(size));
   } else {
-    console.log(1);
+    console.log("1");
   }
 }
 
 stringy(3);
+
+function numberIs(i) {
+	if ((i % 2).zero?) {
+		console.log("odd");
+	} else {
+		console.log("even");
+	}
+}
+
+numberIs(3);
+numberIs(4);
