@@ -14,14 +14,13 @@ function palidrome(string){
   var newWord = string.replace(" ","").toLowerCase();
   console.log(newWord);
   //split string to array, reverse chars, join chars
-  var reversedWord = function reverseString(newString){
-    return newString.split('').reverse('').join('');
+  var reversedWord = function reverseString(str){
+    return str.split('').reverse('').join('');
   };
-  reversedWord(newWord);
-  console.log(reversedWord);
-  if (reversedWord == newWord)
+  console.log(reversedWord(newWord));
+  if (reversedWord == newWord){
   console.log("It's a palidrome");
-  else {
+} else {
     console.log("This word does not reverse to itself.");
   }
 }
