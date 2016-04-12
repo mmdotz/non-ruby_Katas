@@ -10,13 +10,15 @@
 // palindrome("124")
 
 function palidrome(string){
-  //remove whitespace
-  var newWord = string.replace(" ","");
+  //downcase word, remove whitespace
+  var newWord = string.replace(" ","").toLowerCase();
+  console.log(newWord);
   //split string to array, reverse chars, join chars
-  function reverseString(newString){
-    newString.split('').reverse('').join('');
-  }
-  var reversedWord = reverseString(newWord);
+  var reversedWord = function reverseString(newString){
+    return newString.split('').reverse('').join('');
+  };
+  reversedWord(newWord);
+  console.log(reversedWord);
   if (reversedWord == newWord)
   console.log("It's a palidrome");
   else {
@@ -24,5 +26,5 @@ function palidrome(string){
   }
 }
 
-palidrome("Michelle");
-palidrome("tacocat");
+palidrome("Michelle D");
+palidrome("tacoCat");
