@@ -19,7 +19,7 @@ function palidrome(string){
   };
   console.log(reversedWord(newWord));
   if (reversedWord == newWord){
-  console.log("It's a palidrome");
+  console.log("It's a palindrome");
 } else {
     console.log("This word does not reverse to itself.");
   }
