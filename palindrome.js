@@ -1,3 +1,4 @@
+// Ruby solution:
 // def palindrome(string)
 //   new_word = string.gsub(" ","").downcase
 //   puts new_word.reverse == new_word
@@ -12,8 +13,16 @@ function palidrome(string){
   //remove whitespace
   var newWord = string.replace(" ","");
   //split string to array, reverse chars, join chars
-  var reversedWord = function reverseString(newString){
+  function reverseString(newString){
     newString.split('').reverse('').join('');
-  };
-  reverseString(newWord);
+  }
+  var reversedWord = reverseString(newWord);
+  if (reversedWord == newWord)
+  console.log("It's a palidrome");
+  else {
+    console.log("This word does not reverse to itself.");
+  }
 }
+
+palidrome("Michelle");
+palidrome("tacocat");
