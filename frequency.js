@@ -18,11 +18,13 @@
 
 function findFrequency(sentence, word){
   var lowerCasedWord = word.toLowerCase();
-  var sentenceArry = sentence.toLowerCase().split(' ');
-  var count = 0;
-  for (var i = 0; i < sentenceArry.length; ++i){
-    
-  }
+  console.log(lowerCasedWord);
+  var lowerCasedSentence = sentence.toLowerCase();
+  console.log(lowerCasedSentence);
+  var wordToMatch = word;
+  console.log(wordToMatch);
+  var found = lowerCasedSentence.match(wordToMatch);
+  console.log(found);
 }
 
-findFrequency("Ruby is the best language in the World", "the");
+findFrequency("Ruby is The best language in the World", "the");
