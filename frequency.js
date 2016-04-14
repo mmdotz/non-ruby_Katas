@@ -17,13 +17,9 @@
 // puts find_frequency('Ruby is The best language in the World', 'the')
 
 function findFrequency(sentence, word){
-  var lowerCasedWord = word.toLowerCase();
-  console.log(lowerCasedWord);
-  var lowerCasedSentence = sentence.toLowerCase();
-  console.log(lowerCasedSentence);
-  var wordToMatch = word;
-  console.log(wordToMatch);
-  var found = lowerCasedSentence.match(wordToMatch);
+  var regexWord = new RegExp(word);
+  console.log(regexWord);
+  var found = (sentence.match(regexWord) || []).length;
   console.log(found);
 }
 
