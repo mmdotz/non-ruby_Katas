@@ -17,8 +17,10 @@
 // puts find_frequency('Ruby is The best language in the World', 'the')
 
 function findFrequency(sentence, word){
+  var newWord = "\\b" + word + "\\b";
   var regexWord = new RegExp(word, 'gi');
-  console.log(regexWord);
+
+  // console.log(regexWord);
   var found = (sentence.match(regexWord) || []).length;
   console.log(found);
 }
