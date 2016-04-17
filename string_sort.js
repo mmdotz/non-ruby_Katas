@@ -5,16 +5,7 @@
 //
 // # Example: Given a string "Sort words in a sentence", it should return "a in Sort words sentence".
 //
-//
-// # def sort_string(string)
-// #   string.split.sort_by(:length)
-// # end
-// #
-// # print sort_string("Sort words in a sentence")
-
-// #convert to array with split, call .sort_by --length-- how? on the array
-//
-//
+// Ruby solution:
 // def sort_string(string)
 //   string.split.sort_by(&:length)
 // end
@@ -22,7 +13,11 @@
 // print sort_string("Sort words in a sentence")
 
 function sort_string(string){
-  console.log(string.toLowerCase().split(' ').sort());
+  var stringArray = string.toLowerCase().split(' '); //lowercased array of strings separated by commas
+  var sortedArray = stringArray.sort(function(a,b){
+    return (a.length - b.length);
+  });
+  console.log(sortedArray);
 }
 
 sort_string("Ruby is the best language in the world.");
