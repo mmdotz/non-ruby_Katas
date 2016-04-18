@@ -29,12 +29,8 @@
 // printer_error("bbbffeei")        # => "0/8"
 
 function printerError(string){
-  var bad = /n-z/g;
-  console.log(bad);
-  var errorsCount = string.match(/[n-z]/, 'g');
+  var errorsCount = string.match(/[n-z]/g);
   console.log(errorsCount.length + "/" + string.length);
 }
 
-
-
-printerError("ivroivbzzzzivdvoi");    // "10/17"
+printerError("ivroivbzzzzivdvoi");    // "11/17"
